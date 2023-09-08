@@ -104,6 +104,20 @@ git branch <Имя новой ветки >
 ```
 Список веток в репозитории можно посмотреть с помощью команды `git branch`
 
+Пример:
+```Bash
+$ git branch 
+* master
+  test
+  test2
+  test3
+  test4
+```
+
+`git checkout` "Имя ветки"- команда выбора нужной ветки
+`git switch` "Имя ветки"- команда для перехода между созданными ветками
+
+
 ## 11. Слияние веток и разрешение конфликтов
 
 Для слияния выбранной ветки с текущей нужно выполнить команду 
@@ -112,7 +126,96 @@ git branch <Имя новой ветки >
 git merge <Название выбранной ветки >
 ```
 Если была изменена одна и таже часть файла в обеих ветках,   может возникнуть конфликт
+Конфликт может быть разрешен посредством терминала или графического интерфейса.
+
+Пример:
+```Bash
 
 ## 12. Тест
 
+Исправленный текст
+
+```
+
+
+## 12. Удаление веток
+Для удаления веток можно спользовать как полную так и сокращенную команду `delete`
+Варианты написания: git branch ``--delete``, ``-d``, ``-D``
+При написании заклавных букв команда git branch ``-D``, команда будет исполнятся принудительно
+Пример:
+```Bash
+$ git branch --delete resolveConfkikts
+Deleted branch resolveConfkikts (was 9fa91a5).
+
+```
+
+## 13. Визуализация лог коммитов
+
+`git log --graph` - отображение дерева веток, где будут отображаться как создание новых веток, так и их слияние 
+
+Пример:
+
+```Bash
+$ git log --graph
+*   commit f86a16fb4a808941ece1b4778a1eccfb481a22de (HEAD -> master)
+|\  Merge: 215c3ca 9f01de9
+| | Author: Dmitriy Fomin <dmitriytulskiy@gmail.com>
+| | Date:   Fri Sep 8 20:08:52 2023 +0300
+| |
+| |     Merge branch 'newvetka'
+| |
+| * commit 9f01de99d541d39226283d170756e6abc98c85ab
+| | Author: Dmitriy Fomin <dmitriytulskiy@gmail.com>
+| | Date:   Fri Sep 8 20:07:39 2023 +0300
+| |
+| |     Тест
+| |
+* | commit 215c3ca24a5c54e21b3cb045c7f9c077f8bd661a
+|/  Author: Dmitriy Fomin <dmitriytulskiy@gmail.com>
+|   Date:   Fri Sep 8 20:01:22 2023 +0300
+
+Пример №2
+
+
+ commit 15aa0fe6f8edf74c21183d620e8f43c06e217fd6
+|\  Merge: 9fa91a5 15f1e47
+| | Author: Dmitriy Fomin <dmitriytulskiy@gmail.com>
+| | Date:   Fri Sep 8 16:25:13 2023 +0300
+| |
+| |     Merge branch 'createBranches'
+| |
+| * commit 15f1e4799ab7df68231b18bd083af224a3153947
+| | Author: Dmitriy Fomin <dmitriytulskiy@gmail.com>
+| | Date:   Fri Sep 8 16:18:40 2023 +0300
+| |
+| |     Зафиксировали 11 пункт, разрешили противоречия
+| |
+| * commit 799f5014bba90e49c66a59593469c6aa85a3e8b3
+| | Author: Dmitriy Fomin <dmitriytulskiy@gmail.com>
+| | Date:   Fri Sep 8 00:54:59 2023 +0300
+| |
+| |     Добавили раздел 10 - Создание веток в GIT и команду git branch
+| |
+* | commit 9fa91a5f5de308f954cb044a4f7793acaef6d7bb
+| | Author: Dmitriy Fomin <dmitriytulskiy@gmail.com>
+| | Date:   Fri Sep 8 15:35:23 2023 +0300
+| |
+| |     Добавили  11 пункт о слиянии веток
+| |
+* | commit 36fdb686400f2c07403819024f8b5dbfc134ebc5
+|/  Author: Dmitriy Fomin <dmitriytulskiy@gmail.com>
+|   Date:   Fri Sep 8 15:22:04 2023 +0300
+
+```
+
+## 14. Тестовый раздел
+
+Пример тестового текста
+1. тест тест
+
+<<<<<<< HEAD
+## 12. Тест
+
 2. Тест, Тест
+=======
+>>>>>>> test4
