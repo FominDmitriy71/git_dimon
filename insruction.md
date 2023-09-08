@@ -127,10 +127,12 @@ git merge <Название выбранной ветки >
 ```
 Если была изменена одна и таже часть файла в обеих ветках,   может возникнуть конфликт
 Конфликт может быть разрешен посредством терминала или графического интерфейса.
+
+
 <<<<<<< HEAD
 
 <<<<<<< HEAD
-## 12. Тест
+
 
 Возможно что-то добавилось
 =======
@@ -228,21 +230,83 @@ $ git log --graph
 
 ```
 
-## 14. Тестовый раздел
+## 14. Раздел по созданию 4 тестовых веток
 
-Пример тестового текста
-<<<<<<< HEAD
-
-4. тест, тест
-=======
-1. тест тест
-
-<<<<<<< HEAD
-## 12. Тест
-
-2. Тест, Тест
-=======
->>>>>>> test4
->>>>>>> test3
->>>>>>> test2
->>>>>>> test
+$ git log --graph
+*   commit 8b7be6a310f871c2950b195eb0d5222cce609c2e (HEAD -> master)
+|\  Merge: db6b094 41d6cb4
+| | Author: Dmitriy Fomin <dmitriytulskiy@gmail.com>
+| | Date:   Fri Sep 8 21:45:36 2023 +0300
+| |
+| |     Добавление теста для master
+| |
+| *   commit 41d6cb4fe12a340d0c368f4ba57793d421d22609 (test)
+| |\  Merge: bf510ed 3ecf171
+| | | Author: Dmitriy Fomin <dmitriytulskiy@gmail.com>
+| | | Date:   Fri Sep 8 21:44:23 2023 +0300
+| | |
+| | |     Добавление тест
+| | |
+| | *   commit 3ecf17196dcc852c44c93c4397b4cd8a3e42caa0 (test2)
+| | |\  Merge: 89429af d9ff127
+| | | | Author: Dmitriy Fomin <dmitriytulskiy@gmail.com>
+| | | | Date:   Fri Sep 8 21:43:12 2023 +0300
+| | | |
+| | | |     Добавление тест2
+| | | |
+| | | *   commit d9ff1275d2643ab8c1a0076b3953195f07dde344 (test3)
+| | | |\  Merge: dbe3228 8ff85f3
+| | | | | Author: Dmitriy Fomin <dmitriytulskiy@gmail.com>
+| | | | | Date:   Fri Sep 8 21:41:43 2023 +0300
+| | | | |
+| | | | |     Добавление тест3
+| | | | |
+| | | | * commit 8ff85f32809d5c9f35ff504ec98cd863eab060f2 (test4)
+| | | | | Author: Dmitriy Fomin <dmitriytulskiy@gmail.com>
+| | | | | Date:   Fri Sep 8 21:36:09 2023 +0300
+| | | | |
+| | | | |     Добавление тест4
+| | | | |
+| | | * | commit dbe3228ba57444aa6939935c722ef4474de4493e
+| | | |/  Author: Dmitriy Fomin <dmitriytulskiy@gmail.com>
+| | | |   Date:   Fri Sep 8 21:37:07 2023 +0300
+| | | |
+| | | |       Добавление тест3
+| | | |
+| | * | commit 89429af6b470bfabe066fdf4c0c002a385d6805a
+| | | | Author: Dmitriy Fomin <dmitriytulskiy@gmail.com>
+| | | | Date:   Fri Sep 8 21:38:39 2023 +0300
+| | | |
+| | | |     Добавление тест2
+| | | |
+| * | | commit bf510ed75f2238482df79e89032a6714b420ad82
+| | | | Author: Dmitriy Fomin <dmitriytulskiy@gmail.com>
+| | | | Date:   Fri Sep 8 21:39:50 2023 +0300
+| | | |
+| | | |     Добавление тест
+| | | |
+| * | | commit 6c91b9bc43038d39156bd3fa0280fa99c3200c56
+| |\| | Merge: 72efe2e bc25269
+| | | | Author: Dmitriy Fomin <dmitriytulskiy@gmail.com>
+| | | | Date:   Fri Sep 8 21:28:11 2023 +0300
+| | | |
+| | | |     Merge branch 'test2' into test
+| | | |
+| | * | commit bc25269769be01205a8d162a54efa89f6cf2c7b0
+| | |/  Author: Dmitriy Fomin <dmitriytulskiy@gmail.com>
+| | |   Date:   Fri Sep 8 21:23:09 2023 +0300
+| | |
+| | |       Запись о тесте2
+| | |
+| * | commit 72efe2e3b515dab5d79b959fad352ca0a935d4d5
+| |/  Author: Dmitriy Fomin <dmitriytulskiy@gmail.com>
+| |   Date:   Fri Sep 8 21:19:47 2023 +0300
+| |
+| |       Запись о тесте
+| |
+* | commit db6b094189cfd39299c1303b107636ecf40327eb
+|/  Author: Dmitriy Fomin <dmitriytulskiy@gmail.com>
+|   Date:   Fri Sep 8 21:12:11 2023 +0300
+|
+|       Добавлены разделы 12, 13 - удаление веток и визуализации логов
+|
