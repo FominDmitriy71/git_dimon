@@ -349,22 +349,49 @@ origin  https://github.com/FominDmitriy71/Remote.git (fetch)
 origin  https://github.com/FominDmitriy71/Remote.git (push)
  
  ```
+
+ `git clone "url- адрес репозитория"` - клонирование внешнего рипозитория на локальный ПК
+
 3. Переименовываем ветку "master" на "main" командой `git branch -M main` 
 
 4. Отправляем содержимое локального репозитория в удаленный репозиторий
 командой `git push -u origin main`
+ 
+ Пример:
+ ```Bash
+ $ git push -u origin main
+Enumerating objects: 145, done.
+Counting objects: 100% (145/145), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (138/138), done.
+Writing objects: 100% (145/145), 18.48 KiB | 305.00 KiB/s, done.
+Total 145 (delta 81), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (81/81), done.
+To https://github.com/FominDmitriy71/git_dimon.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+ 
+ ```
 
-
-
-
-
-
-
-`git clone "url- адрес репозитория"` - клонирование внешнего рипозитория на локальный ПК
 
 `git pull` - получение изменений и слияние с локальной версией
 
+Пример:
 
+```Bash
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 744 bytes | 10.00 KiB/s, done.
+From https://github.com/FominDmitriy71/git_dimon
+   3bb6d17..15e3725  main       -> origin/main
+Updating 3bb6d17..15e3725
+Fast-forward
+ insruction.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+```
 
 
 
