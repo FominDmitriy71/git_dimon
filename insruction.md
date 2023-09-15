@@ -364,7 +364,7 @@ origin  https://github.com/FominDmitriy71/Remote.git (push)
 
 `git pull` - получение изменений и слияние с локальной версией
 
-`git push` - отправляет локальную версию репозитория на внешний 
+
 
 
 
